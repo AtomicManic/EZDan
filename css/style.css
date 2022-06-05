@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header,
+main,
+section,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  display: block;
+}
+
+body {
+  background-color: #eeeeee;
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  display: flex;
+  background-color: #5bc0de;
+  height: 50px;
+}
+
+header > a {
+  width: 40px;
+  height: 40px;
+}
+
+.login-page .login-container {
+  width: 500px;
+  height: 320px;
+  background-color: white;
+  border-radius: 15px;
+  padding: 30px;
+  margin-top: 150px;
+}
+
+.login-page h1 {
+  margin-bottom: 15px;
+}
+
+.login-page button {
+  margin-top: 10px;
+}
+
+.login-page .form-group {
+  margin-bottom: 10px;
+}
+
+.login-page label {
+  margin-bottom: 5px;
+}
