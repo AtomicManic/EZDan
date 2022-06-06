@@ -1,3 +1,8 @@
+<?php
+    include 'db/db.php';
+    include 'services/login-service.php';
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -56,17 +61,23 @@
             <main>
                 <div class="container login-container">
                     <h1>Login</h1>
-                    <form>
+                    <form action="#" method="post" id="login-frm">
                         <div class="form-group">
                             <label for="username-inpt">Username</label>
-                            <input type="text" class="form-control" id="username-inpt" aria-describedby="emailHelp" placeholder="Username">
+                            <input type="text" class="form-control" name="login-username" id="username-inpt" aria-describedby="emailHelp" placeholder="Username">
                         </div>
                         <div class="form-group">
                             <label for="password">Password</label>
-                            <input type="password" class="form-control" id="password" placeholder="Password">
+                            <input type="password" class="form-control" name="login-pass" id="password" placeholder="Password">
                         </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
-                        </form>
+                        
+                        <?php
+                            if(isset($message)){
+                                include 'alerts/warning-alert.php';
+                            }
+                        ?>
+                    </form>
                 </div>
             </main>
         </div>
@@ -74,3 +85,7 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </html>
+
+<?php
+    mysqli_close($connection);
+?>
