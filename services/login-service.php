@@ -23,7 +23,6 @@
                 } elseif($_SESSION['type'] == 2){
                     header('Location:' . URL . 'childUserHomePage.php');
                 }
-                
            }
         } else {
             $message = "Invalid Username or Password";

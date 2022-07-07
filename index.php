@@ -22,6 +22,10 @@
     <body class="login-page">
         <div class="container-fluid">
             <header class="row top-header">
+                <a href="#">
+                    <img src="images/EZDan-logo.png" alt="">
+                </a>
+                <a href="#">Sign-up</a>
                 <!-- <section class="row top-header">
                     <nav class="navbar navbar-expand-lg col-6">
                         <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -59,8 +63,10 @@
                 </section> -->
             </header>
             <main>
+                <h1>EZDan</h1>
+                <h2>Commuting made easy</h2>
                 <div class="container login-container">
-                    <h1>Login</h1>
+                    <h2>Login</h2>
                     <form action="#" method="post" id="login-frm">
                         <div class="form-group">
                             <label for="username-inpt">Username</label>
@@ -70,20 +76,28 @@
                             <label for="password">Password</label>
                             <input type="password" class="form-control" name="login-pass" id="password" placeholder="Password">
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                        
-                        <?php
-                            if(isset($message)){
-                                include 'alerts/warning-alert.php';
-                            }
-                        ?>
+                        <button type="submit" class="btn btn-primary" id="loginBtn">Submit</button>
                     </form>
+                    <div class="container err-container" id="errors">
+                        <div id="InsertUsernameErr" class="alert alert-warning" role="alert" >
+                            Please Insert a valid Username
+                        </div>
+                        <div id="InsertPasswordErr" class="alert alert-warning" role="alert" >
+                            Please Insert a valid Password
+                        </div>
+                        <?php if(isset($message)){
+                            include 'alerts/warning-alert.php';
+                        } ?>
+                    </div>
                 </div>
             </main>
         </div>
     </body>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- Custom JS -->
+    <script type="text/javascript" src="scripts/login.js"></script>
 </html>
 
 <?php
