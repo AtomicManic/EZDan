@@ -16,8 +16,14 @@
         if(is_array($row)) {
             $_SESSION['id'] = $row['id'];
             $_SESSION['name'] = $row['name'];
-           if(isset($_SESSION['id'])){
-               header('Location:' . URL . 'home-page.php');
+            $_SESSION['type'] = $row['user_type'];
+            if(isset($_SESSION['id'])){
+                if($_SESSION['type'] == 1){
+                    header('Location:' . URL . 'parentUserHomePage.php');
+                } elseif($_SESSION['type'] == 2){
+                    header('Location:' . URL . 'childUserHomePage.php');
+                }
+                
            }
         } else {
             $message = "Invalid Username or Password";
