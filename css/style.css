@@ -116,3 +116,34 @@ header > a {
 .login-page #InsertPasswordErr {
   display: none;
 }
+
+/* ############################## noas page ######################################### */
+
+.noas-page h3{
+  margin: 4%;
+}
+
+.noas-page .destination{
+  margin: 4%;
+  align-items: center;
+  background-color: white;
+}
+
+.noas-page .destination-details{
+  text-align: center;
+  padding: 2%;
+  align-items: center;
+}
+
+.noas-page .add-destination-btn{
+  display: flex;
+  justify-content: center;
+}
+
+.noas-page .btn-primary{
+  padding: 1%;
+}
+
+.noas-page .btn-outline-secondary, .noas-page .btn-info{
+  margin-top: 7%;
+}
