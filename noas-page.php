@@ -1,3 +1,7 @@
+<?php
+    include 'db/db.php';
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -33,13 +37,28 @@
         </header>
         <main>
             <h3>My Destinations</h3>
+            <?php
+             $query = "SELECT * FROM dbShnkr22studWeb1.tbl_destinations_202 WHERE user_id = 6;";
+             $result = mysqli_query($connection, $query);
+             if($result){
+               $row = mysqli_fetch_assoc($result);
+             }
+             else die ("DB query failed");
+             $num_of_rows = mysqli_num_rows($result);
+            ?>
             <section class ="destinations containet-fluid">
                 <section class="destination row">
                     <div class="col-3 destination-details destination-name">
-                        <span>Home</span>
+                        <span>
+                            <?php echo $row['name']; ?>
+                        </span>
                     </div>
                     <div class="col-3 destination-details">
-                        <span>Haroe'e 43 Ramat Gan</span>
+                        <span>
+                            <?php
+                            echo $row['street'] . " " . $row['house_number'] . " " . $row['city'];
+                            ?>
+                        </span>
                     </div>
                     <div class="col-6 destination-details">
                         <div class="row justify-content-center">
@@ -55,7 +74,8 @@
                         </div>
                     </div>
                 </section>
-                <section class ="destinations containet-fluid">
+
+                <!-- <section class ="destinations containet-fluid">
                 <section class="destination row">
                     <div class="col-3 destination-details destination-name">
                         <span>Home</span>
@@ -98,7 +118,7 @@
                             </div>
                         </div>
                     </div>
-                </section>
+                </section> -->
                 
 
             <div class="add-destination-btn">
@@ -111,3 +131,7 @@
         </footer>
     </body>
 </html>
+
+<?php
+  mysqli_close($connection);
+?>
