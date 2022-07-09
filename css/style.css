@@ -28,7 +28,7 @@ body {
 }
 
 header {
-  display: flex;
+  flex-direction: row;
   background-color: #5bc0de;
   height: 50px;
   margin: 0;
@@ -38,6 +38,68 @@ header > a {
   width: 40px;
   height: 40px;
 }
+
+.headerItem:last-of-type {
+  text-align: end;
+  padding: 15px;
+}
+
+.row {
+  margin: 0;
+  padding: 0;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+.menu {
+  /* width: 100%; */
+  height: 80px;
+  background-color: white;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px;
+  padding-bottom: 5px;
+  cursor: pointer;
+}
+
+.menu-item i,
+span {
+  color: #5bc0de;
+  text-align: center;
+}
+
+.menu-item i {
+  font-size: x-large;
+  margin-bottom: 5px;
+}
+
+.menu-item span {
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.menu-item:hover {
+  background-color: #5bc0de;
+}
+
+.menu-item:hover i {
+  color: white;
+}
+
+.menu-item:hover span {
+  color: white;
+}
+
+/* ***********************************************
+*****************   Login Page ******************* 
+**************************************************/
 
 .login-page main {
   width: 100%;
@@ -115,4 +177,117 @@ header > a {
 
 .login-page #InsertPasswordErr {
   display: none;
+}
+
+/* ***********************************************
+***************** Ride Page ******************* 
+**************************************************/
+.ride-page .fromToInfo,
+.lineInfo {
+  background-color: #cccccc;
+  height: 40px;
+  margin-bottom: 8px;
+  height: fit-content;
+  padding: 15px;
+}
+
+.ride-page .fromToItem,
+.lineInfoItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.ride-page .fromToText,
+.lineInfoText {
+  font-weight: 700;
+  margin-left: 8px;
+}
+
+.ride-page .fromToItem span,
+.lineInfo span {
+  color: black;
+}
+
+.ride-page .changeBtn {
+  width: 92px;
+  justify-self: end;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  transition: 0.3s;
+  float: right;
+}
+
+.ride-page .changeBtn:hover {
+  background-color: #5bc0de;
+  color: white;
+}
+
+.ride-page .gradesContainer {
+  background-color: white;
+  height: fit-content;
+  margin-top: 70px;
+}
+
+.ride-page .gradeItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 15px;
+  height: 200px;
+}
+
+.ride-page .gradeItem h5 {
+  font-weight: 600;
+  font-size: 25px;
+}
+
+.ride-page .gradeItem i {
+  font-size: 55px;
+}
+
+.ride-page .gradeItem span {
+  color: black;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.ride-page .totalScoreItem {
+  display: flex;
+  height: 120px;
+  justify-content: space-around;
+}
+
+.ride-page .totalScoreItem span {
+  font-size: 25px;
+  font-weight: 600;
+  color: black;
+  height: 50px;
+}
+
+.ride-page .totalScoreItem span:last-of-type {
+  font-size: 35px;
+}
+
+.ride-page .row:last-of-type {
+  justify-content: center;
+}
+
+.ride-page .selectRideBtn {
+  height: 65px;
+  background-color: #5bc0de;
+  width: 200px;
+  padding: 0;
+  justify-self: center;
+  margin-top: 15px;
+  color: white;
+  font-weight: 600;
+  font-size: 25px;
+  transition: 0.3s;
+}
+
+.ride-page .selectRideBtn:hover {
+  background-color: #0c59cf;
 }
