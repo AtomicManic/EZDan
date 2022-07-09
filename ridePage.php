@@ -23,20 +23,76 @@
                 //if user type is 1, add a row, otherwise - not
             ?>
             <div class="row menu">
-                <a class="col-4 menu-item">
+                <a href="#" class="col-4 menu-item">
                     <i class="fa-solid fa-location-dot"></i>
                     <span>Destinations</span>       
                 </a>
-                <div class="col-4 menu-item">
+                <a href="#"class="col-4 menu-item">
                     <i class="fa-solid fa-wheelchair"></i>
                     <span>Accessibility</span>
-                </div>
-                <div class="col-4 menu-item">
+                </a>
+                <a href="#" class="col-4 menu-item">
                     <i class="fa-solid fa-gear"></i>
                     <span>Settings</span>
-                </div>
+                </a>
             </div>
         </div>
+        <div class="row fromToInfo">
+            <section class="col-6 fromToItem">
+                <span>Ride From:</span>
+                <span class="fromToText" id="departure">From json</span>
+            </section>
+            <section class="col-6 fromToItem">
+                <span>Destination:</span>
+                <span class="fromToText">From db</span>
+            </section>
+        </div>
+        <div class="row lineInfo">
+            <section class="col-6 lineInfoItem">
+                <span>Line:</span>
+                <span class="lineInfoText" id="lineNumber">from json</span>
+            </section>
+            <section class="col-6 lineInfoItem">
+                <span>Station:</span>
+                <span class="lineInfoText" id="station">from json</span>
+            </section>
+        </div>
+            <button type="button" class="btn btn-light changeBtn">Change</button>
+        <div class="container-fluid gradesContainer">
+            <div class="row">
+                <article id="noisGrade" class="gradeItem col-sm-6">
+                    <h5>from json</h5>
+                    <i></i>
+                    <span></span>
+                </article>
+                <article id="congestionGrade" class="gradeItem col-sm-6">
+                <h5>from json</h5>
+                    <i></i>
+                    <span></span>
+                </article>
+            </div>
+            <div class="row">
+                <article id="availableSeats" class="gradeItem col-sm-6">
+                    <h5>from json</h5>
+                    <i></i>
+                    <span></span>
+                </article>
+                <article id="wheelChairSeat" class="gradeItem col-sm-6">
+                <h5>from json</h5>
+                    <i></i>
+                    <span></span>
+                </article>
+            </div>
+            <div class="row totalScoreItem">
+                <span>Total Score:</span>
+                <span id="totalScore"></span>
+            </div>
+        </div>
+        <div class="row selectRide">
+            <button type="submit" class="btn selectRideBtn">Ride
+        </div>
+        </button>
+
         <script src="scripts/getRide.js"></script>
     </body>
 </html>

@@ -7,24 +7,25 @@
   },
   "grades": [
     {
-      "name": "congestion",
+      "name": "Congestion",
       "grade": 8.5,
-      "icon": "fa-fa-something"
+      "icons": ["fa-solid", "fa-user"]
     },
     {
-      "name": "noise",
+      "name": "Noise",
       "grade": 8.1,
-      "icon": "fa-fa-something"
+      "icons": ["fa-solid", "fa-headphones-simple"]
     },
     {
-      "name": "wheel-chair",
-      "isAvailable": true,
-      "icon": "fa-fa-something"
+      "name": "Wheel-chair",
+      "isAvailable": "Available",
+      "icons": ["fa-solid", "fa-wheelchair"]
     },
     {
-      "name": "wheel-chair",
+      "name": "Seats",
       "seatsAvailable": 15,
-      "icon": "fa-fa-something"
+      "icons": ["fa-solid", "fa-chair"]
     }
-  ]
+  ],
+  "totalScore": 8.5
 }
