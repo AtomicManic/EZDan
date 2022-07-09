@@ -1,0 +1,30 @@
+{
+  "id": 1,
+  "line": {
+    "number": 61,
+    "departure": "Haroe'e/Arlozerov",
+    "time": "17:32"
+  },
+  "grades": [
+    {
+      "name": "congestion",
+      "grade": 8.5,
+      "icon": "fa-fa-something"
+    },
+    {
+      "name": "noise",
+      "grade": 8.1,
+      "icon": "fa-fa-something"
+    },
+    {
+      "name": "wheel-chair",
+      "isAvailable": true,
+      "icon": "fa-fa-something"
+    },
+    {
+      "name": "wheel-chair",
+      "seatsAvailable": 15,
+      "icon": "fa-fa-something"
+    }
+  ]
+}
