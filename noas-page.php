@@ -35,49 +35,71 @@
             <h3>My Destinations</h3>
             <section class ="destinations containet-fluid">
                 <section class="destination row">
-                    <div class="col destination-details">
+                    <div class="col-3 destination-details destination-name">
                         <span>Home</span>
                     </div>
-                    <div class="col destination-details">
+                    <div class="col-3 destination-details">
                         <span>Haroe'e 43 Ramat Gan</span>
                     </div>
-                    <div class="col destination-details">
+                    <div class="col-6 destination-details">
                         <div class="row justify-content-center">
-                            <button type="button" class="btn btn-info col-6">Choose line</button>
+                            <button type="button" class="btn btn-info btn-sm col-6">Choose line</button>
                         </div>
-                        <div class="row justify-content-center">
+                        <div class="row">
                             <div class="col">
-                                <button type="button" class="btn btn-outline-secondary">Edit</button>
+                                <button type="button" class="btn btn-outline-secondary btn-sm edit-btn">Edit</button>
                             </div>
                             <div class="col">
-                                <button type="button" class="btn btn-outline-secondary">Delete</button>
+                                <button type="button" class="btn btn-outline-secondary btn-sm delete-btn">Delete</button>
                             </div>
                         </div>
                     </div>
                 </section>
+                <section class ="destinations containet-fluid">
                 <section class="destination row">
-                    <div class="col destination-details">
-                        <span>from</span>
+                    <div class="col-3 destination-details destination-name">
+                        <span>Home</span>
                     </div>
-                    <div class="col destination-details">
-                        <span>to</span>
+                    <div class="col-3 destination-details">
+                        <span>Haroe'e 43 Ramat Gan</span>
                     </div>
-                    <div class="col destination-details">
-                        <span>actions</span>
+                    <div class="col-6 destination-details">
+                        <div class="row justify-content-center">
+                            <button type="button" class="btn btn-info btn-sm col-6">Choose line</button>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <button type="button" class="btn btn-outline-secondary btn-sm edit-btn">Edit</button>
+                            </div>
+                            <div class="col">
+                                <button type="button" class="btn btn-outline-secondary btn-sm delete-btn">Delete</button>
+                            </div>
+                        </div>
                     </div>
                 </section>
+                <section class ="destinations containet-fluid">
                 <section class="destination row">
-                    <div class="col destination-details">
-                        <span>from</span>
+                    <div class="col-3 destination-details destination-name">
+                        <span>Home</span>
                     </div>
-                    <div class="col destination-details">
-                        <span>to</span>
+                    <div class="col-3 destination-details">
+                        <span>Haroe'e 43 Ramat Gan</span>
                     </div>
-                    <div class="col destination-details">
-                        <span>actions</span>
+                    <div class="col-6 destination-details">
+                        <div class="row justify-content-center">
+                            <button type="button" class="btn btn-info btn-sm col-6">Choose line</button>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <button type="button" class="btn btn-outline-secondary btn-sm edit-btn">Edit</button>
+                            </div>
+                            <div class="col">
+                                <button type="button" class="btn btn-outline-secondary btn-sm delete-btn">Delete</button>
+                            </div>
+                        </div>
                     </div>
                 </section>
-            </section>
+                
 
             <div class="add-destination-btn">
                 <button type="button" class="btn btn-primary">Add destination</button>

@@ -132,7 +132,6 @@ header > a {
 .noas-page .destination-details{
   text-align: center;
   padding: 2%;
-  align-items: center;
 }
 
 .noas-page .add-destination-btn{
@@ -142,8 +141,33 @@ header > a {
 
 .noas-page .btn-primary{
   padding: 1%;
+  margin: 7%;
 }
 
 .noas-page .btn-outline-secondary, .noas-page .btn-info{
-  margin-top: 7%;
+  margin: 2%;
+}
+
+.noas-page .destination-name{
+  font-weight: bold;
+}
+
+.noas-page .btn-info{
+  font-size: smaller;
+  width: 60%;
+}
+
+@media only screen and (min-width: 768px){
+  .noas-page .btn-info{
+    font-size: smaller;
+    max-width: 30%;
+  }
+}
+
+.noas-page .edit-btn{
+  float: right;
+}
+
+.noas-page .delete-btn{
+  float: left;
 }
