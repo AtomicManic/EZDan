@@ -38,96 +38,48 @@
         <main>
             <h3>My Destinations</h3>
             <?php
-             $query = "SELECT * FROM dbShnkr22studWeb1.tbl_destinations_202 WHERE user_id = 6;";
-             $result = mysqli_query($connection, $query);
-             if($result){
-               $row = mysqli_fetch_assoc($result);
-             }
-             else die ("DB query failed");
-             $num_of_rows = mysqli_num_rows($result);
+                $query = "SELECT * FROM dbShnkr22studWeb1.tbl_destinations_202 WHERE user_id = 6;";
+                $result = mysqli_query($connection, $query);
+                if(!$result){
+                    die ("DB query failed");
+                }
+                else 
+                    while($row = mysqli_fetch_assoc($result))
+                    {
+                        echo"<section class ='destinations containet-fluid'>";
+                        echo    "<div class='destination row'>";
+                        echo        "<div class='col-3 destination-details destination-name'>";
+                        echo            "<span>";
+                        echo                $row['name'];
+                        echo            "</span>";
+                        echo        "</div>";
+                        echo        "<div class='col-3 destination-details'>";
+                        echo            "<span>";
+                        echo                $row['street'] . " " . $row['house_number'] . " " . $row['city'];
+                        echo            "</span>";
+                        echo        "</div>";
+                        echo        "<div class='col-6 destination-details'>";
+                        echo            "<div class='row justify-content-center'>";
+                        echo                "<button type='button' class='btn btn-info btn-sm col-6'>Choose line</button>";
+                        echo            "</div>";
+                        echo            "<div class='row'>";
+                        echo                "<div class='col'>";
+                        echo                    "<button type='button' class='btn btn-outline-secondary btn-sm edit-btn'>Edit</button>";
+                        echo                "</div>";
+                        echo                "<div class='col'>";
+                        echo                    "<button type='button' class='btn btn-outline-secondary btn-sm delete-btn'>Delete</button>";
+                        echo                "</div>";
+                        echo            "</div>";
+                        echo        "</div>";
+                        echo    "</div>";
+                        echo"</section>";
+                    }
             ?>
-            <section class ="destinations containet-fluid">
-                <section class="destination row">
-                    <div class="col-3 destination-details destination-name">
-                        <span>
-                            <?php echo $row['name']; ?>
-                        </span>
-                    </div>
-                    <div class="col-3 destination-details">
-                        <span>
-                            <?php
-                            echo $row['street'] . " " . $row['house_number'] . " " . $row['city'];
-                            ?>
-                        </span>
-                    </div>
-                    <div class="col-6 destination-details">
-                        <div class="row justify-content-center">
-                            <button type="button" class="btn btn-info btn-sm col-6">Choose line</button>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <button type="button" class="btn btn-outline-secondary btn-sm edit-btn">Edit</button>
-                            </div>
-                            <div class="col">
-                                <button type="button" class="btn btn-outline-secondary btn-sm delete-btn">Delete</button>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- <section class ="destinations containet-fluid">
-                <section class="destination row">
-                    <div class="col-3 destination-details destination-name">
-                        <span>Home</span>
-                    </div>
-                    <div class="col-3 destination-details">
-                        <span>Haroe'e 43 Ramat Gan</span>
-                    </div>
-                    <div class="col-6 destination-details">
-                        <div class="row justify-content-center">
-                            <button type="button" class="btn btn-info btn-sm col-6">Choose line</button>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <button type="button" class="btn btn-outline-secondary btn-sm edit-btn">Edit</button>
-                            </div>
-                            <div class="col">
-                                <button type="button" class="btn btn-outline-secondary btn-sm delete-btn">Delete</button>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section class ="destinations containet-fluid">
-                <section class="destination row">
-                    <div class="col-3 destination-details destination-name">
-                        <span>Home</span>
-                    </div>
-                    <div class="col-3 destination-details">
-                        <span>Haroe'e 43 Ramat Gan</span>
-                    </div>
-                    <div class="col-6 destination-details">
-                        <div class="row justify-content-center">
-                            <button type="button" class="btn btn-info btn-sm col-6">Choose line</button>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <button type="button" class="btn btn-outline-secondary btn-sm edit-btn">Edit</button>
-                            </div>
-                            <div class="col">
-                                <button type="button" class="btn btn-outline-secondary btn-sm delete-btn">Delete</button>
-                            </div>
-                        </div>
-                    </div>
-                </section> -->
-                
-
             <div class="add-destination-btn">
                 <button type="button" class="btn btn-primary">Add destination</button>
             </div>
-            
         </main>
         <footer>
-
         </footer>
     </body>
 </html>
