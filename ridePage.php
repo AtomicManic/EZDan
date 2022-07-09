@@ -18,7 +18,18 @@
     </head>
     <body class="ride-page">
         <div class="container-fluid">
-            <header class="row top-header"></header>
+            <header class="row top-header">
+                <div class="col-6 headerItem">
+                <a href="#" id="logo">
+                    <img src="images/EZDan-logo.png" alt="">
+                </a>
+                </div>
+                <div class="col-6 headerItem">
+                <a href="">
+                    <img src="" alt="avatar">
+                </a>
+                </div>
+            </header>
             <?php
                 //if user type is 1, add a row, otherwise - not
             ?>
@@ -36,8 +47,7 @@
                     <span>Settings</span>
                 </a>
             </div>
-        </div>
-        <div class="row fromToInfo">
+            <div class="row fromToInfo">
             <section class="col-6 fromToItem">
                 <span>Ride From:</span>
                 <span class="fromToText" id="departure">From json</span>
@@ -92,6 +102,8 @@
             <button type="submit" class="btn selectRideBtn">Ride
         </div>
         </button>
+        </div>
+        
 
         <script src="scripts/getRide.js"></script>
     </body>
