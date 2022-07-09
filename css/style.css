@@ -256,13 +256,15 @@ span {
 
 .ride-page .totalScoreItem {
   display: flex;
-  height: 150px;
+  height: 120px;
+  justify-content: space-around;
 }
 
 .ride-page .totalScoreItem span {
   font-size: 25px;
   font-weight: 600;
   color: black;
+  height: 50px;
 }
 
 .ride-page .totalScoreItem span:last-of-type {
