@@ -291,3 +291,12 @@ span {
 .ride-page .selectRideBtn:hover {
   background-color: #0c59cf;
 }
+
+/* ***********************************************
+***************** Noa's Home Page ******************* 
+**************************************************/
+
+.childUserHomePage .destinationsList {
+  height: fit-content;
+  background-color: white;
+}

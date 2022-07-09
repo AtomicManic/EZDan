@@ -30,9 +30,6 @@
                 </a>
                 </div>
             </header>
-            <?php
-                //if user type is 1, add a row, otherwise - not
-            ?>
             <div class="row menu">
                 <a href="#" class="col-4 menu-item">
                     <i class="fa-solid fa-location-dot"></i>
