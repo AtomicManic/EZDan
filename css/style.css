@@ -180,9 +180,9 @@ span {
 }
 
 /* ***********************************************
-***************** Ride Page ******************* 
+***************** Ride Page + Lines Page ******************* 
 **************************************************/
-.ride-page .fromToInfo,
+.fromToInfo,
 .lineInfo {
   background-color: #cccccc;
   height: 40px;
@@ -191,7 +191,7 @@ span {
   padding: 15px;
 }
 
-.ride-page .fromToItem,
+.fromToItem,
 .lineInfoItem {
   display: flex;
   flex-direction: column;
@@ -199,18 +199,18 @@ span {
   align-items: center;
 }
 
-.ride-page .fromToText,
+.fromToText,
 .lineInfoText {
   font-weight: 700;
   margin-left: 8px;
 }
 
-.ride-page .fromToItem span,
+.fromToItem span,
 .lineInfo span {
   color: black;
 }
 
-.ride-page .changeBtn {
+.changeBtn {
   width: 92px;
   justify-self: end;
   margin-right: 15px;
@@ -219,7 +219,7 @@ span {
   float: right;
 }
 
-.ride-page .changeBtn:hover {
+.changeBtn:hover {
   background-color: #5bc0de;
   color: white;
 }
@@ -292,6 +292,47 @@ span {
   background-color: #0c59cf;
 }
 
+.linesPageChild .lineInfo:first-of-type {
+  margin-top: 100px;
+}
+
+.linesPageChild .lineInfo {
+  background-color: white;
+  /* height: 250px; */
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.linesPageChild .walkAndLineItem,
+.stationAndGradeItam {
+  display: flex;
+  align-content: center;
+  text-align: center;
+  height: 75px;
+  justify-content: space-around;
+  font-size: 25px;
+}
+
+.stationAndGradeItam {
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.stationAndGradeItam p {
+  margin: 0;
+}
+
+.stationAndGradeItam:first-of-type {
+  margin-bottom: 20px;
+}
+
+.walkAndLineItem .fa-solid {
+  font-size: 30px;
+}
+
+.bold {
+  font-weight: 700;
+}
 /* ***********************************************
 ***************** Noa's Home Page ******************* 
 **************************************************/
@@ -299,4 +340,10 @@ span {
 .childUserHomePage .destinationsList {
   height: fit-content;
   background-color: white;
+}
+
+.selectLineBtn {
+  background-color: #5bc0de;
+  height: 50px;
+  width: 150px;
 }
