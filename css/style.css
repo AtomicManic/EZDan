@@ -119,7 +119,7 @@ header > a {
 
 /* ############################## noas page ######################################### */
 
-.noas-page h3, .add-destination h3{
+.noas-page h3, .add-destination h3, .add-destination p{
   margin: 4%;
 }
 
@@ -177,6 +177,9 @@ header > a {
 .add-destination form{
   background-color: white;
   margin: 4%;
+}
+
+.add-destination .container{
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -187,5 +190,9 @@ header > a {
 }
 
 .add-destination .submit-btn{
-  display: block;
+  text-align: center;
+}
+
+.add-destination .btn-primary{
+  margin-bottom: 4%;
 }
