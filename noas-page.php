@@ -78,7 +78,7 @@
             
             <?php   } ?>
             <div class="add-destination-btn">
-                <button type="button" class="btn btn-primary">Add destination</button>
+                <a href="add-destination.php"><button type="button" class="btn btn-primary">Add destination</button></a>
             </div>
         </main>
         <footer>
