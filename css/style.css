@@ -358,10 +358,42 @@ span {
   font-weight: 700;
 }
 /* ***********************************************
-***************** Noa's Home Page ******************* 
+***************** Child Home Page ******************* 
 **************************************************/
 
 .childUserHomePage .destinationsList {
   height: fit-content;
   background-color: white;
+}
+
+/* ***********************************************
+***************** Parent Home Page ******************* 
+**************************************************/
+
+.users {
+  height: 200px;
+  margin-top: 15px;
+}
+
+.userItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+}
+
+.userItem a {
+  display: flex;
+  flex-direction: column;
+  height: inherit;
+  justify-content: space-evenly;
+  width: 100px;
+  background-color: white;
+  text-align: center;
+  align-items: center;
+}
+
+.userItem a img {
+  width: 50px;
+  height: 50px;
 }

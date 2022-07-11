@@ -1,6 +1,5 @@
 <?php
-    //THIS PAGE MUST HAVE A SESSION OPEN!!!!
-    session_start();
+    include "services/users-serivce.php";
     echo 'id: ' . $_SESSION['id'] .', name: ' . $_SESSION['name'];
     echo $_SESSION['img'];
 ?>
@@ -23,19 +22,31 @@
     </head>
     <body class="parantHomePage">
     <div class="container-fluid">
-    <header class="row top-header">
-                <div class="col-6 headerItem">
+        <header class="row top-header">
+            <div class="col-6 headerItem">
                     <a href="#" id="logo">
-                        <img src="images/EZDan-logo.png" alt="">
-                    </a>
-                    </div>
-                    <div class="col-6 headerItem">
-                    <a href="#">
-                        <img src="<?php echo $_SESSION['img']; ?>" alt="avatar">
-                    </a>
+                    <img src="images/EZDan-logo.png" alt="">
+                </a>
                 </div>
-            </header>
+                <div class="col-6 headerItem">
+                <a href="#">
+                    <img src="<?php echo $_SESSION['img']; ?>" alt="avatar">
+                </a>
+            </div>
+        </header>
     </div>
-        
+        <h1 class="row">Hi <?php echo $_SESSION['name'] ?></h1>
+        <section class="container-fluid">
+            <?php
+                echo '<div class="row users">';
+                while($row = mysqli_fetch_assoc($result)){
+                    echo '<article class="col-sm-4 userItem">';
+                    echo    '<a href="childUser.php?childId='.$row['id'].'">';
+                    echo        '<img src='.$row['img_url'].'>';
+                    echo        '<h3>'.$row['name'].'</h3>';
+                    echo    '</a></article>';
+                }
+            ?>
+        </section>
     </body>
 </html>
