@@ -32,8 +32,8 @@
                     </a>
                     </div>
                     <div class="col-6 headerItem">
-                    <a href="">
-                        <img src="" alt="avatar">
+                    <a href="#">
+                        <img src="<?php echo $_SESSION['img']; ?>" alt="avatar">
                     </a>
                 </div>
             </header>

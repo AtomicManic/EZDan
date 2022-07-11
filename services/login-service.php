@@ -17,6 +17,7 @@
             $_SESSION['id'] = $row['id'];
             $_SESSION['name'] = $row['name'];
             $_SESSION['type'] = $row['user_type'];
+            $_SESSION['img'] = $row['img_url'];
             if(isset($_SESSION['id'])){
                 if($_SESSION['type'] == 1){
                     header('Location:' . URL . 'parentUserHomePage.php');
