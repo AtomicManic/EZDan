@@ -21,19 +21,7 @@
     </head>
     <body class="noas-page">
         <header class= "container-fluid">
-            <!-- <section class= "row top-header">
-                <nav>
-                    here goes the nav
-                </nav>
-                <a href="#" class = "EZDan-logo">logo</a>
-                <a href="#" class= main-user-img>AlonaIMage</a>
-            </section>
-            <section class= "row middle-header">
 
-            </section>
-            <section class= "row bottom-header">
-
-            </section> -->
         </header>
         <main>
             <h3>My Destinations</h3>
@@ -66,10 +54,10 @@
                                    </div>
                                    <div class='row'>
                                        <div class='col'>
-                                           <button type='button' class='btn btn-outline-secondary btn-sm edit-btn'>Edit</button>
+                                            <a href="add-destination.php?dest_id=6&state=edit"><button type='button' class='btn btn-outline-secondary btn-sm edit-btn'>Edit</button></a>
                                        </div>
                                        <div class='col'>
-                                           <button type='button' class='btn btn-outline-secondary btn-sm delete-btn'>Delete</button>
+                                        <a href="services/destination-form-logic.php?dest_id=<?php echo $row['destination_id']?>&state=delete"><button type='button' class='btn btn-outline-secondary btn-sm delete-btn'>Delete</button></a>
                                        </div>
                                    </div>
                                </div>
