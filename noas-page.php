@@ -54,7 +54,7 @@
                                    </div>
                                    <div class='row'>
                                        <div class='col'>
-                                            <a href="add-destination.php?dest_id=6&state=edit"><button type='button' class='btn btn-outline-secondary btn-sm edit-btn'>Edit</button></a>
+                                            <a href="add-destination.php?dest_id=<?php echo $row['destination_id']?>&state=edit"><button type='button' class='btn btn-outline-secondary btn-sm edit-btn'>Edit</button></a>
                                        </div>
                                        <div class='col'>
                                         <a href="services/destination-form-logic.php?dest_id=<?php echo $row['destination_id']?>&state=delete"><button type='button' class='btn btn-outline-secondary btn-sm delete-btn'>Delete</button></a>

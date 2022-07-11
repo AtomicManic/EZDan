@@ -14,13 +14,18 @@
                     header('Location:' . URL . '/noas-page.php');
                 }
 
-                else{    
-                    $dest_name = mysqli_real_escape_string($connection, $_GET['dest_name']);
-                    $dest_city = mysqli_real_escape_string($connection, $_GET['dest_city']);
-                    $dest_street = mysqli_real_escape_string($connection, $_GET['dest_street']);
-                    $dest_number = mysqli_real_escape_string($connection, $_GET['dest_number']);
-                    if(isset($_GET['dest_home_or_work'])){
-                        $dest_home_or_work = mysqli_real_escape_string($connection, $_GET['dest_home_or_work']);
+                else{
+                    if(isset($_POST['dest_name']) && $_POST['dest_name'] != ""){
+                        $dest_name = mysqli_real_escape_string($connection, $_POST['dest_name']);
+                    }
+                    else{
+                        $dest_name = 'My Destination';
+                    }    
+                    $dest_city = mysqli_real_escape_string($connection, $_POST['dest_city']);
+                    $dest_street = mysqli_real_escape_string($connection, $_POST['dest_street']);
+                    $dest_number = mysqli_real_escape_string($connection, $_POST['dest_number']);
+                    if(isset($_POST['dest_home_or_work'])){
+                        $dest_home_or_work = mysqli_real_escape_string($connection, $_POST['dest_home_or_work']);
                         if($dest_home_or_work == "home"){
                             $dest_home = 1;
                             $dest_work = 0;
