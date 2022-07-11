@@ -25,7 +25,7 @@
         </header>
         <main>
             <h3>Add destination</h3>
-            <form action="#" method="POST">
+            <form action="services/destination-form-logic.php" method="GET">
             <div class="container">
                 <div class="form-question">
                     <div>
@@ -43,24 +43,24 @@
 
                 <div class="form-question">
                     <div>
-                        <Label for="dest_name">*Street:</Label>
+                        <Label for="dest_street">*Street:</Label>
                     </div>
                     <input type="text" id="dest_street" name= "dest_street" placeholder= "Street" required>
                 </div>
 
                 <div class="form-question">
                     <div>
-                        <Label for="dest_name">*Number:</Label>
+                        <Label for="dest_number">*Number:</Label>
                     </div>
                     <input type="number" id="dest_number" name= "dest_number" placeholder= "999" required>
                 </div>
 
                 <div class="form-question">
                     <div>
-                        <Label for="dest_name">Home:</Label>
-                        <input type="radio" id="dest_home" name= "dest_home_or_work" value="home">
+                        <Label for="dest_home_or_work">Home:</Label>
+                        <input type="radio" id="dest_home_or_work" name= "dest_home_or_work" value="home">
                         <Label for="dest_name">Work:</Label>
-                        <input type="radio" id="dest_work" name= "dest_home_or_work" value="work">
+                        <input type="radio" id="dest_home_or_work" name= "dest_home_or_work" value = "work">
                     </div> 
                 </div>
             </div>

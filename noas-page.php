@@ -39,7 +39,7 @@
             <h3>My Destinations</h3>
 
             <?php
-                $query = "SELECT * FROM dbShnkr22studWeb1.tbl_destinations_202 WHERE user_id = 6;";
+                $query = "SELECT * FROM dbShnkr22studWeb1.tbl_destinations_202 WHERE user_id = 6;"; // ADD DYNAMIC ID FROM SESSION $$$$$$$$$$$$
                 $result = mysqli_query($connection, $query);
                 if(!$result){
                     die ("DB query failed");
