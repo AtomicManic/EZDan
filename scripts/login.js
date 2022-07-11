@@ -11,8 +11,6 @@ window.onload = () => {
     const username = document.getElementById('username-inpt').value;
     const password = document.getElementById('password').value;
 
-    console.log(username);
-
     if (username == '') {
       document.getElementById('InsertUsernameErr').style.display = 'block';
       fail = 1;
