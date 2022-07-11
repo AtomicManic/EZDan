@@ -28,7 +28,7 @@
         <div class="container-fluid">
         <header class="row top-header">
                 <div class="col-6 headerItem">
-                    <a href="#" id="logo">
+                    <a href="childUserHomePage.php" id="logo">
                         <img src="images/EZDan-logo.png" alt="">
                     </a>
                     </div>
@@ -39,7 +39,7 @@
                 </div>
             </header>
             <div class="row menu">
-                <a href="#" class="col-4 menu-item">
+                <a href="childUserHomePage.php" class="col-4 menu-item">
                     <i class="fa-solid fa-location-dot"></i>
                     <span>Destinations</span>       
                 </a>
@@ -90,8 +90,70 @@
                     <p class="bold">8.5</p>
                 </div>
                 <div class="col-sm-4 stationAndGradeItam">
-                    <button type="submit" class="btn selectRideBtn">Ride
-                    </button>
+                    <a href="ridePage.php?destId=1" type="submit" class="btn selectLineBtn">Select
+                    </a>
+                </div>
+            </div>
+        </article>
+        <article class="row lineInfo">
+            <div class="row walkAndLine">
+                <div class="col-5 walkAndLineItem">
+                    <span>100m</span>
+                    <i class="fa-solid fa-person-walking"></i>
+                    <i class="fa-solid fa-arrow-right-long"></i>
+                </div>
+                <div class="col-2 walkAndLineItem">
+                    <span>161</span>
+                </div>
+                <div class="col-5 walkAndLineItem">
+                    <i class="fa-solid fa-arrow-right-long"></i>
+                    <i class="fa-solid fa-person-walking"></i>
+                    <span>150m</span>
+                </div>
+            </div>
+            <div class="row stationAndGrade">
+                <div class="col-sm-4 stationAndGradeItam">
+                    <span>From: <span class="bold">Bialik/Habanim</span></span>
+                    <span>To: <span class="bold">Haroe'e/Tuval</span> </span>
+                </div>
+                <div class="col-sm-4 stationAndGradeItam">
+                    <p>Grade</p>
+                    <p class="bold">8.2</p>
+                </div>
+                <div class="col-sm-4 stationAndGradeItam">
+                    <a href="ridePage.php?destId=1" type="submit" class="btn selectLineBtn">Select
+                    </a>
+                </div>
+            </div>
+        </article>
+        <article class="row lineInfo">
+            <div class="row walkAndLine">
+                <div class="col-5 walkAndLineItem">
+                    <span>70m</span>
+                    <i class="fa-solid fa-person-walking"></i>
+                    <i class="fa-solid fa-arrow-right-long"></i>
+                </div>
+                <div class="col-2 walkAndLineItem">
+                    <span>125</span>
+                </div>
+                <div class="col-5 walkAndLineItem">
+                    <i class="fa-solid fa-arrow-right-long"></i>
+                    <i class="fa-solid fa-person-walking"></i>
+                    <span>100m</span>
+                </div>
+            </div>
+            <div class="row stationAndGrade">
+                <div class="col-sm-4 stationAndGradeItam">
+                    <span>From: <span class="bold">Elit/Arlozerov</span></span>
+                    <span>To: <span class="bold">Haroe'e/Tuval</span> </span>
+                </div>
+                <div class="col-sm-4 stationAndGradeItam">
+                    <p>Grade</p>
+                    <p class="bold">8.0</p>
+                </div>
+                <div class="col-sm-4 stationAndGradeItam">
+                    <a  href="ridePage.php?destId=1" type="submit" class="btn selectLineBtn">Select
+                    </a>
                 </div>
             </div>
         </article>

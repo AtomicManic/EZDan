@@ -20,7 +20,7 @@
         <div class="container-fluid">
             <header class="row top-header">
                 <div class="col-6 headerItem">
-                <a href="#" id="logo">
+                <a href="childUserHomePage.php" id="logo">
                     <img src="images/EZDan-logo.png" alt="">
                 </a>
                 </div>
@@ -65,7 +65,7 @@
                 </section>
             </div>
             <button type="button" class="btn btn-light changeBtn">Change</button>
-        <div class="container-fluid gradesContainer">
+            <div class="container-fluid gradesContainer">
             <div class="row">
                 <article id="noisGrade" class="gradeItem col-sm-6">
                     <h5>from json</h5>
@@ -96,13 +96,9 @@
             </div>
         </div>
         <div class="row selectRide">
-            <button type="submit" >Select
+            <button type="submit" class="btn selectRideBtn">Ride
             </button>
         </div>
-        
-        </div>
-        
-
         <script src="scripts/getRide.js"></script>
     </body>
 </html>

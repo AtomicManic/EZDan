@@ -330,6 +330,24 @@ span {
   font-size: 30px;
 }
 
+.stationAndGradeItam:last-of-type {
+  justify-content: center;
+  align-items: center;
+}
+.selectLineBtn {
+  background-color: #5bc0de;
+  height: 50px;
+  width: 150px;
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.selectLineBtn:hover {
+  background-color: #0c59cf;
+  color: white;
+}
+
 .bold {
   font-weight: 700;
 }
@@ -340,10 +358,4 @@ span {
 .childUserHomePage .destinationsList {
   height: fit-content;
   background-color: white;
-}
-
-.selectLineBtn {
-  background-color: #5bc0de;
-  height: 50px;
-  width: 150px;
 }
