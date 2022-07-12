@@ -25,7 +25,7 @@
         </header>
         <main>
             <h3>Add destination</h3>
-            <form action="services/destination-form-logic.php" method="POST">
+            <form action="services/destination-logic.php" method="POST">
             <div class="container">
                 <div class="form-question">
                     <div>
