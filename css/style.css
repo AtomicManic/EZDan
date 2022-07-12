@@ -185,84 +185,86 @@ span {
   display: none;
 }
 
-
 /* ############################## noas page ######################################### */
 
-.noas-page h3, .add-destination h3, .add-destination p{
+.destinationsList h3,
+.add-destination h3,
+.add-destination p {
   margin: 4%;
 }
 
-.noas-page .destination{
+.destinationsList .destination {
   margin: 4%;
   align-items: center;
   background-color: white;
 }
 
-.noas-page .destination-details{
+.destinationsList .destination-details {
   text-align: center;
   padding: 2%;
 }
 
-.noas-page .add-destination-btn{
+.destinationsList .add-destination-btn {
   display: flex;
   justify-content: center;
 }
 
-.noas-page .btn-primary{
+.destinationsList .btn-primary {
   padding: 1%;
   margin: 7%;
 }
 
-.noas-page .btn-outline-secondary, .noas-page .btn-info{
+.destinationsList .btn-outline-secondary,
+.destinationsList .btn-info {
   margin: 2%;
 }
 
-.noas-page .destination-name{
+.destinationsList .destination-name {
   font-weight: bold;
 }
 
-.noas-page .btn-info{
+.destinationsList .btn-info {
   font-size: smaller;
   width: 60%;
 }
 
-@media only screen and (min-width: 768px){
-  .noas-page .btn-info{
+@media only screen and (min-width: 768px) {
+  .destinationsList .btn-info {
     font-size: smaller;
     max-width: 30%;
   }
 }
 
-.noas-page .edit-btn{
+.destinationsList .edit-btn {
   float: right;
 }
 
-.noas-page .delete-btn{
+.destinationsList .delete-btn {
   float: left;
 }
 
 /* ############################## add-destination ######################################### */
 
-.add-destination form{
+.add-destination form {
   background-color: white;
   margin: 4%;
 }
 
-.add-destination .container{
+.add-destination .container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-.add-destination .form-question{
+.add-destination .form-question {
   margin: 4%;
 }
 
-.add-destination .submit-btn{
+.add-destination .submit-btn {
   text-align: center;
 }
 
-.add-destination .btn-primary{
+.add-destination .btn-primary {
   margin-bottom: 4%;
 }
 
@@ -444,7 +446,7 @@ span {
 
 .childUserHomePage .destinationsList {
   height: fit-content;
-  background-color: white;
+  /* background-color: white; */
 }
 
 /* ***********************************************
@@ -496,7 +498,12 @@ span {
   height: 50px;
 }
 
-.fa-user {
+.parantHomePage .fa-user {
+  font-size: 50px;
+  color: #5bc0de;
+}
+
+.childUserUnderParent .fa-user {
   font-size: 50px;
   color: #5bc0de;
 }

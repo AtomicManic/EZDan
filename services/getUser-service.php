@@ -1,16 +1,15 @@
 <?php
-    include 'db/db.php';
-    session_start();
+include 'db/db.php';
+// session_start();
 
-    $query = "SELECT * FROM tbl_users_202 WHERE id = " . $_GET['childId'];
+$query = "SELECT * FROM tbl_users_202 WHERE id = " . $_GET['childId'];
 
-    $result = mysqli_query($connection, $query);
-    
-    if(!$result){
-        die("DB query failed");
-    }
+$result2 = mysqli_query($connection, $query);
 
-    $row = mysqli_fetch_assoc($result);
+if (!$result2) {
+    die("DB query failed");
+}
 
-    mysqli_close($connection);
-?>
+$row2 = mysqli_fetch_assoc($result2);
+
+mysqli_close($connection);

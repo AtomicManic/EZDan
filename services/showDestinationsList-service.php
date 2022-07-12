@@ -1,18 +1,7 @@
 <?php
-include 'db/db.php';
-session_start();
-?>
 
-<h3>My Destinations</h3>
+while ($row = mysqli_fetch_assoc($result)) { ?>
 
-<?php
-$query = "SELECT * FROM dbShnkr22studWeb1.tbl_destinations_202 WHERE user_id =" . $_SESSION['id'];
-$result = mysqli_query($connection, $query);
-if (!$result) {
-    die("DB query failed");
-} else
-    while ($row = mysqli_fetch_assoc($result)) {
-?>
     <section class='destinations containet-fluid'>
         <div class='destination row'>
             <div class='col-3 destination-details destination-name'>
@@ -36,19 +25,18 @@ if (!$result) {
                         <a href="add-destination.php?dest_id=<?php echo $row['destination_id'] ?>&state=edit"><button type='button' class='btn btn-outline-secondary btn-sm edit-btn'>Edit</button></a>
                     </div>
                     <div class='col'>
-                        <a href="services/destination-logic.php?dest_id=<?php echo $row['destination_id'] ?>&state=delete"><button type='button' class='btn btn-outline-secondary btn-sm delete-btn'>Delete</button></a>
+                        <?php
+                        if ($_SESSION['type'] == 1 && isset($_GET['childId'])) {
+                            $url = "services/destination-logic.php?childId=" . $_GET['childId'] . "&dest_id=" . $row['destination_id'] . "&state=delete";
+                        } else {
+                            $url = "services/destination-logic.php?dest_id=" . $row['destination_id'] . "&state=delete";
+                        }
+                        ?>
+                        <a href="<?php echo $url; ?>"><button type='button' class='btn btn-outline-secondary btn-sm delete-btn'>Delete</button></a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-<?php   } ?>
-<div class="add-destination-btn">
-    <a href="add-destination.php"><button type="button" class="btn btn-primary">Add destination</button></a>
-</div>
-
-
-<?php
-mysqli_close($connection);
-?>
+<?php } ?>
