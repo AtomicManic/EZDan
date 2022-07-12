@@ -1,13 +1,13 @@
 <?php
-//THIS PAGE MUST HAVE A SESSION OPEN!!!!
 include "services/getDestinationsList-service.php";
+include "services/getUser-service.php";
 ?>
 
 <!DOCTYPE html>
 <html>
 
 <head>
-    <title>Home Page</title>
+    <title>Login Page</title>
     <!-- Meta -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -23,11 +23,11 @@ include "services/getDestinationsList-service.php";
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body class="childUserHomePage">
+<body class="childUserUnderParent">
     <div class="container-fluid">
         <header class="row top-header">
             <div class="col-6 headerItem">
-                <a href="#" id="logo">
+                <a href="parentUserHomePage.php" id="logo">
                     <img src="images/EZDan-logo.png" alt="">
                 </a>
             </div>
@@ -37,13 +37,42 @@ include "services/getDestinationsList-service.php";
                 </a>
             </div>
         </header>
-        <?php include "includes/childHeader.php" ?>
+        <div class="row childHeader">
+            <a href="#">
+                <?php
+                if ($row2['img_url'] == null) {
+                    echo '<i class="fa-solid fa-user"></i>';
+                } else {
+                    echo '<img src="';
+                    echo $row2['img_url'];
+                    echo '" alt="">';
+                }
+
+                echo '<h1>' . $row2['name'] . '</h1>';
+                ?>
+            </a>
+
+        </div>
+        <div class="row childEditOptions">
+            <div class="col-sm-4 editBtn">
+
+            </div>
+            <div class="col-sm-4 editBtn">
+                <a href="userForm.php?childId=<?php echo $row2['id'] . "&&button=edit"; ?>
+                    " type="button" id="editUserBtn" class="btn btn-secondary editBtnItem">Edit</a>
+
+                <a href="<?php echo "services/userDelete-service.php?childId=" . $row2['id']; ?>" type="button" id="deleteUserBtn" class="btn btn-danger editBtnItem">Delete</a>
+            </div>
+            <div class="col-sm-4 editBtn"></div>
+        </div>
         <section class="row destinationsList">
             <?php
-            include 'services/showDestinationsList-service.php'
+            include 'services/showDestinationsList-service.php';
             ?>
             <div class="add-destination-btn">
-                <a href="add-destination.php"><button type="button" class="btn btn-primary">Add destination</button></a>
+                <a href="add-destination.php?childId=<?php echo $_GET['childId']; ?>">
+                    <button type="button" class="btn btn-primary">Add destination</button>
+                </a>
             </div>
         </section>
     </div>
