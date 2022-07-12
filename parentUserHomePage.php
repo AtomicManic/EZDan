@@ -1,7 +1,5 @@
 <?php
-    include "services/users-serivce.php";
-    echo 'id: ' . $_SESSION['id'] .', name: ' . $_SESSION['name'];
-    echo $_SESSION['img'];
+    include "services/getUsers-serivce.php";
 ?>
 
 <!DOCTYPE html>
@@ -19,34 +17,50 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
         <!-- Custom CSS -->
         <link rel="stylesheet" href="css/style.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
     <body class="parantHomePage">
-    <div class="container-fluid">
-        <header class="row top-header">
-            <div class="col-6 headerItem">
-                    <a href="#" id="logo">
-                    <img src="images/EZDan-logo.png" alt="">
-                </a>
-                </div>
+        <div class="container-fluid parantHomePageContainer">
+            <header class="row top-header">
                 <div class="col-6 headerItem">
-                <a href="#">
-                    <img src="<?php echo $_SESSION['img']; ?>" alt="avatar">
-                </a>
+                        <a href="#" id="logo">
+                        <img src="images/EZDan-logo.png" alt="">
+                    </a>
+                    </div>
+                    <div class="col-6 headerItem">
+                    <a href="#">
+                        <img src="<?php echo $_SESSION['img']; ?>" alt="avatar">
+                    </a>
+                </div>
+            </header>
+            <h1 class="row">Hi <?php echo $_SESSION['name']; ?>!</h1>
+            <h3 class="row usersTitle">My users</h3>
+            <!-- <div class="row"> -->
+                <section class="container-fluid usersContainer">
+                <?php
+                    echo '<div class="row users">';
+                    while($row = mysqli_fetch_assoc($result)){
+                        echo '<article class="col-sm-4 userItem">';
+                        echo    '<a href="childUser.php?childId='.$row['id'].'">';
+                        if($row['img_url'] == null){
+                            echo '<i class="fa-solid fa-user"></i>';
+                        } else {
+                            echo '<img src='.$row['img_url'].'>';
+                        }
+                        echo        '<h3>'.$row['name'].'</h3>';
+                        echo    '</a></article>';
+                    }
+                ?>
+                </section>
+            <!-- </div> -->
+            <div class="row btnRow">
+                <a type="submit" href="userForm.php?button=create" id="addUserBtn" class="btn btn-primary" >+ Add user</a>
             </div>
-        </header>
-    </div>
-        <h1 class="row">Hi <?php echo $_SESSION['name'] ?></h1>
-        <section class="container-fluid">
-            <?php
-                echo '<div class="row users">';
-                while($row = mysqli_fetch_assoc($result)){
-                    echo '<article class="col-sm-4 userItem">';
-                    echo    '<a href="childUser.php?childId='.$row['id'].'">';
-                    echo        '<img src='.$row['img_url'].'>';
-                    echo        '<h3>'.$row['name'].'</h3>';
-                    echo    '</a></article>';
-                }
-            ?>
-        </section>
+        </div>
     </body>
 </html>
+
+<?php
+    mysqli_close($connection);
+?>
