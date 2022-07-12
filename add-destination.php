@@ -64,6 +64,13 @@
                     </div> 
                 </div>
             </div>
+
+            <?php
+                if(isset($_GET['state']) && $_GET['state'] == "edit"){
+                    echo "<input type='hidden' name = 'dest_id' value=".$_GET['dest_id'].">";
+                    echo "<input type='hidden' name = 'state' value = 'edit'>";
+                }
+            ?>
                 <div class="form-question submit-btn">
                     <button type="submit" class="btn btn-primary">Add destination</button> 
                 </div>

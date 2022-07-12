@@ -41,9 +41,25 @@
                     }
                     $user_id = 6;       // ADD DYNAMIC USER ID #########################################
 
-                    $query  = "INSERT INTO dbShnkr22studWeb1.tbl_destinations_202 
-                    (name, city, street, house_number, is_work, is_home, user_id)
-                    VALUES ('$dest_name', '$dest_city', '$dest_street', '$dest_number', '$dest_work', '$dest_home', 6);";  // ADD DYNAMIC USER ID #########################################
+                    if(isset($_POST['state']) && $_POST['state'] == "edit"){
+                        $dest_id = $_POST['dest_id'];
+                        $query = "UPDATE dbShnkr22studWeb1.tbl_destinations_202
+                        SET 
+                            name = '$dest_name',
+                            city = '$dest_city',
+                            street = '$dest_street',
+                            house_number = '$dest_number',
+                            is_work = $dest_work,
+                            is_home = $dest_home
+                        WHERE destination_id = $dest_id;";
+                    }
+                    else{
+                        $query  = "INSERT INTO dbShnkr22studWeb1.tbl_destinations_202 
+                        (name, city, street, house_number, is_work, is_home, user_id)
+                        VALUES ('$dest_name', '$dest_city', '$dest_street', '$dest_number',
+                        '$dest_work', '$dest_home', 6);";  // ADD DYNAMIC USER ID #########################################
+                    }
+                    
                     $result = mysqli_query($connection, $query);
                     if(!$result){
                         die("DB query failed");
