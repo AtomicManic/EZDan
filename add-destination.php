@@ -36,8 +36,11 @@ if ($_SESSION['type'] == 1 && isset($_GET['childId'])) {
     </head>
 
     <body class="add-destination">
-        <header class="container-fluid">
-
+        <header class="row top-header">
+            <a href="#">
+                <img src="images/EZDan-logo.png" alt="">
+            </a>
+            <?php include "includes/dropDownLogout.php";?>
         </header>
         <?php
             if($_SESSION['type'] == 2){

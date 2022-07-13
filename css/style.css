@@ -39,6 +39,12 @@ header > a {
   height: 40px;
 }
 
+.top-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .headerItem {
   height: fit-content;
   padding: 5px;
@@ -118,7 +124,7 @@ span {
   justify-content: space-between;
 }
 
-.login-page .top-header a:first-of-type {
+.top-header a:first-of-type {
   width: fit-content;
   margin-bottom: 5px;
 }
@@ -672,4 +678,17 @@ span {
 #userInsertPasswordErr,
 #userInsertValidPasswordErr {
   display: none;
+}
+
+/* ***********************************************
+***************** User Form Page ******************* 
+**************************************************/
+
+.dropdown-menu a span {
+  color: black;
+  margin-left: 5px;
+}
+
+.dropdown {
+  width: fit-content;
 }
