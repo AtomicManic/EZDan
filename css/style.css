@@ -644,3 +644,10 @@ span {
 #cancelBtn:hover {
   background-color: #cccccc;
 }
+
+#userInsertNameErr,
+#userInsertUsernameErr,
+#userInsertPasswordErr,
+#userInsertValidPasswordErr {
+  display: none;
+}
