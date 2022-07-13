@@ -1,6 +1,5 @@
 <?php
 include 'db/db.php';
-// session_start();
 
 $query = "SELECT * FROM tbl_users_202 WHERE id = " . $_GET['childId'];
 

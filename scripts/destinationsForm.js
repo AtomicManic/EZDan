@@ -15,8 +15,6 @@ window.onload = () => {
     const destStreet = document.getElementById('dest_street').value;
     const destHomeNumber = document.getElementById('dest_number').value;
 
-    console.log(destHomeNumber);
-
     if (destName.length < 3) {
       document.getElementById('destNameErr').style.display = 'block';
       fail = 1;
