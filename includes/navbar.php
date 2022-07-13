@@ -1,5 +1,5 @@
 <nav class="navbar navbar-light navbar-expand-lg">
-  <div class="container-fluid">
+  <div class="container-fluid wrapper">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" 
              aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
              <span class="navbar-toggler-icon"></span>

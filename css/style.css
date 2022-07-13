@@ -672,3 +672,20 @@ span {
 #userInsertValidPasswordErr {
   display: none;
 }
+/* ***********************************************
+***************** NavBar******************* 
+**************************************************/
+
+nav .wrapper{
+  margin-left: 4%;
+  margin-right: 4%;
+}
+
+.nav-link{
+  color: white !important;
+}
+
+.nav-item:hover{
+  background-color:cadetblue;
+  border-radius: 10px;
+}
