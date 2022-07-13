@@ -33,11 +33,12 @@ if ($_SESSION['type'] == 1 && isset($_GET['childId'])) {
             crossorigin="anonymous" referrerpolicy="no-referrer" />
         <!-- LINKS -->
         <link rel="stylesheet" href="css/style.css">
+
     </head>
 
     <body class="add-destination">
-        <header class="container-fluid">
-
+        <header>
+            <?php include("includes/navbar.php"); ?>
         </header>
         <?php
             if($_SESSION['type'] == 2){

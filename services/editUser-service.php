@@ -22,6 +22,7 @@
         WHERE id= $userId;";
 
         $result = mysqli_query($connection, $query);
+        mysqli_close($connection);
         
         if(!$result){
             die("DB query failed");

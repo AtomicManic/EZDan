@@ -30,4 +30,5 @@
         }
     } 
     unset($_POST);
+    mysqli_close($connection);
 ?>
