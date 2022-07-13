@@ -268,6 +268,24 @@ span {
   margin-bottom: 4%;
 }
 
+.destErrcontainer {
+  display: flex;
+  /* flex-direction: column; */
+  /* width: 300px; */
+}
+
+.add-destination .alert {
+  margin: 15px;
+  width: 300px;
+}
+
+#destCityErr,
+#destNameErr,
+#destStreetErr,
+#destNumberErr {
+  display: none;
+}
+
 /* ***********************************************
 ***************** Ride Page + Lines Page ******************* 
 **************************************************/
@@ -643,6 +661,10 @@ span {
 
 #cancelBtn:hover {
   background-color: #cccccc;
+}
+
+.userErrcontainer {
+  margin-top: 15px;
 }
 
 #userInsertNameErr,
