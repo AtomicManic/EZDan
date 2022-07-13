@@ -54,7 +54,7 @@ session_start();
                 </section>
                 <section class="col-6 fromToItem">
                     <span>Destination:</span>
-                    <span class="fromToText">From db</span>
+                    <span class="fromToText"><?php echo $_GET['destName'] ?></span>
                 </section>
             </div>
             <a href="childUserHomePage.php" type="button" class="btn btn-light changeBtn">Change</a>
@@ -85,7 +85,8 @@ session_start();
                     <p class="bold">8.5</p>
                 </div>
                 <div class="col-sm-4 stationAndGradeItam">
-                    <a href="ridePage.php?destId=1" type="submit" class="btn selectLineBtn">Select
+                    <a href="ridePage.php?destname=<?php
+                        echo $_GET['destName'];?>" type="submit" class="btn selectLineBtn">Select
                     </a>
                 </div>
             </div>
@@ -116,7 +117,8 @@ session_start();
                     <p class="bold">8.2</p>
                 </div>
                 <div class="col-sm-4 stationAndGradeItam">
-                    <a href="ridePage.php?destId=1" type="submit" class="btn selectLineBtn">Select
+                    <a href="ridePage.php?destname=<?php
+                        echo $_GET['destName'];?>" type="submit" class="btn selectLineBtn">Select
                     </a>
                 </div>
             </div>
@@ -147,7 +149,8 @@ session_start();
                     <p class="bold">8.0</p>
                 </div>
                 <div class="col-sm-4 stationAndGradeItam">
-                    <a href="ridePage.php?destId=1" type="submit" class="btn selectLineBtn">Select
+                    <a href="ridePage.php?destname=<?php
+                        echo $_GET['destName'];?>" type="submit" class="btn selectLineBtn">Select
                     </a>
                 </div>
             </div>

@@ -35,11 +35,11 @@
             <div class="row fromToInfo">
                 <section class="col-6 fromToItem">
                     <span>Ride From:</span>
-                    <span class="fromToText" id="departure">From json</span>
+                    <span class="fromToText" id="departure"></span>
                 </section>
                 <section class="col-6 fromToItem">
                     <span>Destination:</span>
-                    <span class="fromToText">From db</span>
+                    <span class="fromToText"><?php echo $_GET['destname']; ?></span>
                 </section>
             </div>
             <div class="row lineInfo">
@@ -52,7 +52,6 @@
                     <span class="lineInfoText" id="station">from json</span>
                 </section>
             </div>
-            <a href="linesPage.php" type="button" class="btn btn-light changeBtn">Change</a>
             <div class="container-fluid gradesContainer">
                 <div class="row">
                     <article id="noisGrade" class="gradeItem col-sm-6">
