@@ -25,17 +25,8 @@ include "services/getDestinationsList-service.php";
 
 <body class="childUserHomePage">
     <div class="container-fluid">
-        <header class="row top-header">
-            <div class="col-6 headerItem">
-                <a href="#" id="logo">
-                    <img src="images/EZDan-logo.png" alt="">
-                </a>
-            </div>
-            <div class="col-6 headerItem">
-                <a href="#">
-                    <img src="<?php echo $_SESSION['img']; ?>" alt="avatar">
-                </a>
-            </div>
+        <header>
+        <?php include('includes/navbar.php'); ?>
         </header>
         <?php include "includes/childHeader.php" ?>
         <section class="row destinationsList">

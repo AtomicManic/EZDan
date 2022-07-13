@@ -25,18 +25,10 @@ include "services/getUser-service.php";
 
 <body class="childUserUnderParent">
     <div class="container-fluid">
-        <header class="row top-header">
-            <div class="col-6 headerItem">
-                <a href="parentUserHomePage.php" id="logo">
-                    <img src="images/EZDan-logo.png" alt="">
-                </a>
-            </div>
-            <div class="col-6 headerItem">
-                <a href="#">
-                    <img src="<?php echo $_SESSION['img']; ?>" alt="avatar">
-                </a>
-            </div>
+        <header>
+            <?php include('includes/navbar.php'); ?>
         </header>
+        
         <div class="row childHeader">
             <a href="#">
                 <?php

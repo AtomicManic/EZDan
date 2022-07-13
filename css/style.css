@@ -30,7 +30,6 @@ body {
 header {
   flex-direction: row;
   background-color: #5bc0de;
-  height: 50px;
   margin: 0;
 }
 
@@ -672,4 +671,21 @@ span {
 #userInsertPasswordErr,
 #userInsertValidPasswordErr {
   display: none;
+}
+/* ***********************************************
+***************** NavBar******************* 
+**************************************************/
+
+nav .wrapper{
+  margin-left: 4%;
+  margin-right: 4%;
+}
+
+.nav-link{
+  color: white !important;
+}
+
+.nav-item:hover{
+  background-color:cadetblue;
+  border-radius: 10px;
 }
