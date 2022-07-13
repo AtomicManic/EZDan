@@ -24,7 +24,12 @@ include "services/getUsers-serivce.php";
 </head>
 
 <body class="parantHomePage">
-    <div class="container-fluid parantHomePageContainer">
+
+    <header>
+        <?php include('includes/navbar.php'); ?>
+    </header>
+    
+    <!-- <div class="container-fluid parantHomePageContainer">
         <header class="row top-header">
             <div class="col-6 headerItem">
                 <a href="#" id="logo">
@@ -35,8 +40,8 @@ include "services/getUsers-serivce.php";
                 <a href="#">
                     <img src="<?php echo $_SESSION['img']; ?>" alt="avatar">
                 </a>
-            </div>
-        </header>
+            </div> 
+        </header>-->
         <h1 class="row">Hi <?php echo $_SESSION['name']; ?>!</h1>
         <h3 class="row usersTitle">My users</h3>
         <!-- <div class="row"> -->
