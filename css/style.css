@@ -30,7 +30,6 @@ body {
 header {
   flex-direction: row;
   background-color: #5bc0de;
-  height: 50px;
   margin: 0;
 }
 
@@ -191,7 +190,7 @@ span {
   display: none;
 }
 
-/* ############################## noas page ######################################### */
+/* ############################## destinations ######################################### */
 
 .destinationsList h3,
 .add-destination h3,
@@ -203,6 +202,7 @@ span {
   margin: 4%;
   align-items: center;
   background-color: white;
+  border-radius: 10px;
 }
 
 .destinationsList .destination-details {
@@ -480,6 +480,10 @@ span {
   height: 100%;
 }
 
+.parantHomePage h3 {
+  margin: 4%;
+}
+
 .parantHomePage h1 {
   margin-top: 15px;
   margin-left: 15px;
@@ -535,6 +539,7 @@ span {
 .btnRow {
   justify-content: center;
   align-items: center;
+  margin: 4%;
 }
 
 #addUserBtn {
@@ -691,4 +696,21 @@ span {
 
 .dropdown {
   width: fit-content;
+}
+/* ***********************************************
+***************** NavBar******************* 
+**************************************************/
+
+nav .wrapper {
+  margin-left: 4%;
+  margin-right: 4%;
+}
+
+.nav-link {
+  color: white !important;
+}
+
+.nav-item:hover {
+  background-color: cadetblue;
+  border-radius: 10px;
 }

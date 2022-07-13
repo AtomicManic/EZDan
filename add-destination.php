@@ -33,14 +33,12 @@ if ($_SESSION['type'] == 1 && isset($_GET['childId'])) {
             crossorigin="anonymous" referrerpolicy="no-referrer" />
         <!-- LINKS -->
         <link rel="stylesheet" href="css/style.css">
+
     </head>
 
     <body class="add-destination">
-        <header class="row top-header">
-            <a href="#">
-                <img src="images/EZDan-logo.png" alt="">
-            </a>
-            <?php include "includes/dropDownLogout.php";?>
+        <header>
+            <?php include("includes/navbar.php"); ?>
         </header>
         <?php
             if($_SESSION['type'] == 2){
