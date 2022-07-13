@@ -30,7 +30,6 @@ body {
 header {
   flex-direction: row;
   background-color: #5bc0de;
-  height: 50px;
   margin: 0;
 }
 
