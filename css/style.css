@@ -210,6 +210,10 @@ span {
   padding: 2%;
 }
 
+.destinationsList .edit-delete-btns{
+  padding: 0;
+}
+
 .destinationsList .add-destination-btn {
   display: flex;
   justify-content: center;
@@ -290,6 +294,15 @@ span {
 #destStreetErr,
 #destNumberErr {
   display: none;
+}
+
+.form-control{
+  margin-left: 4%;
+  max-width: 50%;
+}
+
+.form-contro-header{
+  margin-left: 4%;
 }
 
 /* ***********************************************
@@ -490,12 +503,12 @@ span {
 }
 .parantHomePage .usersTitle {
   margin-top: 25px;
-  margin-left: 15px;
+  margin-left: 4%;
 }
 
 .users {
   min-height: 200px;
-  /* margin-top: 15px; */
+  margin: 4%;
 }
 
 .userItem {
@@ -520,11 +533,13 @@ span {
   background-color: white;
   text-align: center;
   align-items: center;
+  border-radius: 10px;
 }
 
 .userItem a img {
   width: 50px;
   height: 50px;
+  margin-top: 3%;
 }
 
 .parantHomePage .fa-user {
