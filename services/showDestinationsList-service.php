@@ -1,8 +1,31 @@
+<!-- ajax jquery cdn -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-<!-- filter goes here -->
+
+<h3>My Destinations</h3>
+<div>
+    <h6>Search your destinations:</h6>
+    <input class="form-control" id="myInput" type="text" placeholder="My destination">
+</div>
+
+<!-- <script src="scripts/destination-filter.js"></script> -->
+
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $(".destination").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+
+
+
 
 <?php
-echo"<h3>My Destinations</h3>";
 while ($row = mysqli_fetch_assoc($result)) { ?>
 <section class='destinations containet-fluid'>
     <div class='destination row'>
