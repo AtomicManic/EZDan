@@ -41,7 +41,6 @@ if ($_GET['state'] == "delete") {
         $dest_work = 0;
         $dest_home = 0;
     }
-    $user_id = 6;       // ADD DYNAMIC USER ID #########################################
 
     if (isset($_POST['state']) && $_POST['state'] == "edit") {
         $dest_id = $_POST['dest_id'];

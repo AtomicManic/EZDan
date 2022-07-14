@@ -6,10 +6,11 @@
         header("Location:" . URL . "index.php");
     }
     
-    if($_SESSION['type'] == 1 && !isset($_GET['destName'])){
+    if($_SESSION['type'] == 1){
         header("Location:" . URL . "parentUserHomePage.php");
     }
-    if($_SESSION['type'] == 2 && !isset($_GET['destName'])){
+    
+    if(!isset($_GET['destname'])){
         header("Location:" . URL . "childUserHomePage.php");
     }
 ?>
