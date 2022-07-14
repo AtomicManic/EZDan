@@ -8,10 +8,10 @@ if(!isset($_SESSION['id'])){
     header("Location:" . URL . "index.php");
 }
 
-if($_SESSION['type'] == 1 && !isset($_GET['destName'])){
+if($_SESSION['type'] == 1){
     header("Location:" . URL . "parentUserHomePage.php");
 }
-if($_SESSION['type'] == 2 && !isset($_GET['destName'])){
+if(!isset($_GET['destname'])){
     header("Location:" . URL . "childUserHomePage.php");
 }
 ?>
@@ -65,7 +65,7 @@ if($_SESSION['type'] == 2 && !isset($_GET['destName'])){
                 </section>
                 <section class="col-6 fromToItem">
                     <span>Destination:</span>
-                    <span class="fromToText"><?php echo $_GET['destName'] ?></span>
+                    <span class="fromToText"><?php echo $_GET['destname'] ?></span>
                 </section>
             </div>
             <a href="childUserHomePage.php" type="button" class="btn btn-light changeBtn">Change</a>
@@ -97,7 +97,7 @@ if($_SESSION['type'] == 2 && !isset($_GET['destName'])){
                 </div>
                 <div class="col-sm-4 stationAndGradeItam">
                     <a href="ridePage.php?destname=<?php
-                        echo $_GET['destName'];?>" type="submit" class="btn selectLineBtn">Select
+                        echo $_GET['destname'];?>" type="submit" class="btn selectLineBtn">Select
                     </a>
                 </div>
             </div>
@@ -129,7 +129,7 @@ if($_SESSION['type'] == 2 && !isset($_GET['destName'])){
                 </div>
                 <div class="col-sm-4 stationAndGradeItam">
                     <a href="ridePage.php?destname=<?php
-                        echo $_GET['destName'];?>" type="submit" class="btn selectLineBtn">Select
+                        echo $_GET['destname'];?>" type="submit" class="btn selectLineBtn">Select
                     </a>
                 </div>
             </div>
@@ -161,7 +161,7 @@ if($_SESSION['type'] == 2 && !isset($_GET['destName'])){
                 </div>
                 <div class="col-sm-4 stationAndGradeItam">
                     <a href="ridePage.php?destname=<?php
-                        echo $_GET['destName'];?>" type="submit" class="btn selectLineBtn">Select
+                        echo $_GET['destname'];?>" type="submit" class="btn selectLineBtn">Select
                     </a>
                 </div>
             </div>
