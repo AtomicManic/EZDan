@@ -1,6 +1,13 @@
 <?php
 include 'db/db.php';
+
 session_start();
+
+if((!isset($_SESSION['id']))){
+    session_destroy();
+    header("Location:" . URL . "index.php");
+}
+
 
 if ($_SESSION['type'] == 1 && isset($_GET['childId'])) {
     $url = "services/destination-logic.php?childId=" . $_GET['childId'];
@@ -33,11 +40,12 @@ if ($_SESSION['type'] == 1 && isset($_GET['childId'])) {
             crossorigin="anonymous" referrerpolicy="no-referrer" />
         <!-- LINKS -->
         <link rel="stylesheet" href="css/style.css">
+
     </head>
 
     <body class="add-destination">
-        <header class="container-fluid">
-
+        <header>
+            <?php include("includes/navbar.php"); ?>
         </header>
         <?php
             if($_SESSION['type'] == 2){

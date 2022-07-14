@@ -8,3 +8,5 @@ $result1 = mysqli_query($connection, $query1);
 if (!$result1) {
     die("DB query failed");
 }
+
+mysqli_close($connection);

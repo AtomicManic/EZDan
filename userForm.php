@@ -1,12 +1,22 @@
 <?php
+include "db/config.php";
 session_start();
+
+if(!isset($_SESSION['id'])){
+    header("Location:" . URL . "index.php");
+}
+
+if($_SESSION['type'] == 2){
+    header("Location:" . URL . "childUserHomePage.php");
+}
+
+if(!isset($_GET['button'])){
+    header("Location:" . URL . "parentUserHomePage.php");
+}
+
 if (isset($_GET['childId'])) {
     include "services/getUser-service.php";
 }
-
-
-
-
 ?>
 
 <!DOCTYPE html>
@@ -34,23 +44,14 @@ if (isset($_GET['childId'])) {
 
     <body class="childUserUnderParent">
         <div class="container-fluid">
-            <header class="row top-header">
-                <div class="col-6 headerItem">
-                    <a href="#" id="logo">
-                        <img src="images/EZDan-logo.png" alt="">
-                    </a>
-                </div>
-                <div class="col-6 headerItem">
-                    <a href="#">
-                        <img src="<?php echo $_SESSION['img']; ?>" alt="avatar">
-                    </a>
-                </div>
+            <header>
+                <?php include ('includes/navbar.php'); ?>
             </header>
             <div class="container-fluid userFormContainer">
                 <h2 class="row">
                     <?php
                         if (isset($_GET['button']) && $_GET['button'] == 'edit') {
-                            echo "Upaded " . $row2['name'] . "'s details";
+                            echo "Update " . $row2['name'] . "'s details";
                         }
                         else if (isset($_GET['button']) && $_GET['button'] == 'create') {
                             echo "Create New User";
@@ -128,11 +129,11 @@ if (isset($_GET['childId'])) {
                 </div>
             </div>
         </div>
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+        </script>
         <script src="scripts/userForm.js"></script>
     </body>
 
 </html>
-
-<!-- <?php
-// mysqli_close($connection);
-?> -->

@@ -17,5 +17,6 @@ session_start();
         die("DB query failed");
     }
     
+    mysqli_close($connection);
     header('Location:' . URL . 'parentUserHomePage.php');
 ?>

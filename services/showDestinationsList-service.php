@@ -7,7 +7,6 @@ while ($row = mysqli_fetch_assoc($result)) { ?>
         <div class='col-3 destination-details destination-name'>
             <span>
                 <?php echo $row['name'] ?>
-                <?php echo $row['destination_id'] ?>
             </span>
         </div>
         <div class='col-3 destination-details'>
@@ -34,7 +33,6 @@ while ($row = mysqli_fetch_assoc($result)) { ?>
                             $url = "services/destination-logic.php?dest_id=" . $row['destination_id'] . "&state=delete";
                         }
                         ?>
-
                     <button type='button' class='btn btn-outline-secondary btn-sm delete-btn' id="dest-delete-btn"
                         data-toggle="modal" data-target="#exampleModal" data-dest_name="<?php echo $row['name'] ?>"
                         data-url="<?php echo $url ?>">Delete</button>
@@ -43,6 +41,7 @@ while ($row = mysqli_fetch_assoc($result)) { ?>
         </div>
     </div>
 </section>
+
 
 <?php } ?>
 
@@ -62,11 +61,11 @@ while ($row = mysqli_fetch_assoc($result)) { ?>
                 <a href="<?php echo $url; ?>">
                     <button type="button" class="btn btn-primary">Delete</button>
                 </a>
-
             </div>
         </div>
     </div>
 </div>
+
 
 
 <script type="text/javascript" src="scripts/destination-delete.js"></script>
