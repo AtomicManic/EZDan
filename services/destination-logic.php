@@ -17,7 +17,7 @@ if ($_GET['state'] == "delete") {
     } else if ($_SESSION['type'] == 1) {
         header('Location:' . URL . 'parentUserHomePage.php');
     } else if ($_SESSION['type'] == 2) {
-        header('Location:' . URL . 'childUserHomepage.php');
+        header('Location:' . URL . 'childUserHomePage.php');
     }
 } else {
     if (isset($_POST['dest_name']) && $_POST['dest_name'] != "") {
