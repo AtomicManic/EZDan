@@ -746,6 +746,7 @@ nav .wrapper {
 
 .nav-link {
   color: white !important;
+  margin-left: 4%;
 }
 
 .nav-item:hover {
