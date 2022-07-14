@@ -1,6 +1,13 @@
 <?php
 include 'db/db.php';
+
 session_start();
+
+if((!isset($_SESSION['id']))){
+    session_destroy();
+    header("Location:" . URL . "index.php");
+}
+
 
 if ($_SESSION['type'] == 1 && isset($_GET['childId'])) {
     $url = "services/destination-logic.php?childId=" . $_GET['childId'];

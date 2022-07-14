@@ -1,6 +1,16 @@
 <?php
-//THIS PAGE MUST HAVE A SESSION OPEN!!!!
+session_start();
+
+include "db/config.php";
+
+if(!isset($_SESSION['id'])){
+    header("Location:" . URL . "index.php");
+} else if ($_SESSION['type'] == 1){
+    header("Location:" . URL . "parentUserHomePage.php");
+} 
+
 include "services/getDestinationsList-service.php";
+
 ?>
 
 <!DOCTYPE html>
