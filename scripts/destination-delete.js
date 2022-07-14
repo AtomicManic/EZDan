@@ -1,15 +1,8 @@
-document
-  .getElementById('exampleModal')
-  .addEventListener('shown.bs.modal', function (e) {
-    e.preventDefault();
-    console.log('hi');
-    var button = document.getElementById('dest-delete-btn');
-    var destId = button.getAttribute('data-dest_id');
-    var url = button.getAttribute('data-url');
-
-    console.log(destId);
-    console.log(url);
-
-    var modalBody = document.getElementsByClassName('modal-body');
-    modalBody.innerHTML = destId;
+window.onload = () => {
+  const modal = document.getElementById('exampleModal');
+  $(modal).on('show.bs.modal', function (e) {
+    const modalBody = document.getElementsByClassName('modal-body');
+    console.log(e.relatedTarget.dataset);
+    modalBody[0].innerHTML = e.relatedTarget.dataset['dest_name'];
   });
+};

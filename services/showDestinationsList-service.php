@@ -35,21 +35,16 @@ while ($row = mysqli_fetch_assoc($result)) { ?>
                         }
                         ?>
 
-                    <!-- <a href="<?php echo $url; ?>">
-                            <button type='button' class='btn btn-outline-secondary btn-sm delete-btn' 
-                            data-toggle="modal" data-target="#exampleModal">Delete</button>
-                        </a> -->
-
                     <button type='button' class='btn btn-outline-secondary btn-sm delete-btn' id="dest-delete-btn"
-                        data-toggle="modal" data-target="#exampleModal"
-                        data-dest_id="<?php echo $row['destination_id'] ?>"
-                        data-url="<?php echo $row['destination_id'] ?>">Delete</button>
+                        data-toggle="modal" data-target="#exampleModal" data-dest_name="<?php echo $row['name'] ?>"
+                        data-url="<?php echo $url ?>">Delete</button>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
+<?php } ?>
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -75,5 +70,3 @@ while ($row = mysqli_fetch_assoc($result)) { ?>
 
 
 <script type="text/javascript" src="scripts/destination-delete.js"></script>
-
-<?php } ?>
