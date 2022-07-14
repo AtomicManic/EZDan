@@ -1,6 +1,22 @@
 <?php
+session_start();
+
+include "db/config.php";
+
+// if(!isset($_SESSION['id'])){
+//     echo "first";
+//     header("Location:" . URL . "index.php");
+// }
+
+// if($_SESSION['type'] == 2){
+//     echo "second";
+//     // header("Location:" . URL . "childUserHomePage.php");
+// }
+
+echo $_SESSION['type'];
 include "services/getDestinationsList-service.php";
 include "services/getUser-service.php";
+
 ?>
 
 <!DOCTYPE html>

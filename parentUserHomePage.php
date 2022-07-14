@@ -1,4 +1,5 @@
 <?php
+session_start();
 include "services/getDestinationsList-service.php";
 include "services/getUsers-serivce.php";
 ?>

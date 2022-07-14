@@ -1,5 +1,5 @@
 <?php
-//THIS PAGE MUST HAVE A SESSION OPEN!!!!
+session_start();
 include "services/getDestinationsList-service.php";
 ?>
 

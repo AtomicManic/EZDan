@@ -1,5 +1,5 @@
 <?php
-    session_start();
+    
     include 'db/db.php';
     
     if(!empty($_POST['login-username'])){
@@ -14,6 +14,7 @@
         
     
         if(is_array($row)) {
+            session_start();
             $_SESSION['id'] = $row['id'];
             $_SESSION['name'] = $row['name'];
             $_SESSION['type'] = $row['user_type'];
