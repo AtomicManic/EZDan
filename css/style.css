@@ -504,6 +504,7 @@ span {
   justify-content: center;
   height: 130px;
   margin-top: 15px;
+  padding-top: 10px;
 }
 
 .userItem h3 {

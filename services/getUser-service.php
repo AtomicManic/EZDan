@@ -12,6 +12,4 @@ if(isset($_GET['childId'])){
     $row2 = mysqli_fetch_assoc($result2);
     
     mysqli_close($connection);
-} else {
-    header("Location:" . URL . "index.php");
 }

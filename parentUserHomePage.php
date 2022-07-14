@@ -1,5 +1,15 @@
 <?php
+include "db/config.php";
+
 session_start();
+
+if(!isset($_SESSION['id'])){
+    header("Location:" . URL . "index.php");
+}
+
+if($_SESSION['type'] == 2 && !isset($_GET['destName'])){
+    header("Location:" . URL . "childUserHomePage.php");
+}
 include "services/getDestinationsList-service.php";
 include "services/getUsers-serivce.php";
 ?>

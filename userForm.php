@@ -1,6 +1,19 @@
 <?php
 include "db/config.php";
 session_start();
+
+if(!isset($_SESSION['id'])){
+    header("Location:" . URL . "index.php");
+}
+
+if($_SESSION['type'] == 2){
+    header("Location:" . URL . "childUserHomePage.php");
+}
+
+if(!isset($_GET['button'])){
+    header("Location:" . URL . "parentUserHomePage.php");
+}
+
 if (isset($_GET['childId'])) {
     include "services/getUser-service.php";
 }
@@ -38,7 +51,7 @@ if (isset($_GET['childId'])) {
                 <h2 class="row">
                     <?php
                         if (isset($_GET['button']) && $_GET['button'] == 'edit') {
-                            echo "Upaded " . $row2['name'] . "'s details";
+                            echo "Update " . $row2['name'] . "'s details";
                         }
                         else if (isset($_GET['button']) && $_GET['button'] == 'create') {
                             echo "Create New User";
