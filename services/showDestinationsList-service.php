@@ -5,11 +5,9 @@
 
 <h3>My Destinations</h3>
 <div>
-    <h6>Search your destinations:</h6>
+    <h6 class="form-contro-header">Search your destinations:</h6>
     <input class="form-control" id="myInput" type="text" placeholder="My destination">
 </div>
-
-<!-- <script src="scripts/destination-filter.js"></script> -->
 
 <script>
 $(document).ready(function(){
@@ -21,9 +19,6 @@ $(document).ready(function(){
   });
 });
 </script>
-
-
-
 
 <?php
 while ($row = mysqli_fetch_assoc($result)) { ?>
@@ -46,11 +41,11 @@ while ($row = mysqli_fetch_assoc($result)) { ?>
                 </a>
             </div>
             <div class='row'>
-                <div class='col'>
+                <div class='col edit-delete-btns'>
                     <a href="add-destination.php?dest_id=<?php echo $row['destination_id'] ?>&state=edit"><button
                             type='button' class='btn btn-outline-secondary btn-sm edit-btn'>Edit</button></a>
                 </div>
-                <div class='col'>
+                <div class='col edit-delete-btns'>
                     <?php
                         if ($_SESSION['type'] == 1 && isset($_GET['childId'])) {
                             $url = "services/destination-logic.php?childId=" . $_GET['childId'] . "&dest_id=" . $row['destination_id'] . "&state=delete";
