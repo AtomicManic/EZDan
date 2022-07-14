@@ -10,13 +10,13 @@
 </div>
 
 <script>
-$(document).ready(function(){
-  $("#myInput").on("keyup", function() {
-    var value = $(this).val().toLowerCase();
-    $(".destination").filter(function() {
-      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+$(document).ready(function() {
+    $("#myInput").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $(".destination").filter(function() {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
     });
-  });
 });
 </script>
 
@@ -37,7 +37,7 @@ while ($row = mysqli_fetch_assoc($result)) { ?>
         <div class='col-6 destination-details'>
             <div class='row justify-content-center'>
                 <a href="linesPage.php?destname=<?php echo $row['name'] ?>">
-                    <button type='button' class='btn btn-info btn-sm col-6'>Choose line</button>
+                    <button type='button' id="chooseLineBtn" class='btn   col-6'>Choose line</button>
                 </a>
             </div>
             <div class='row'>
@@ -53,7 +53,7 @@ while ($row = mysqli_fetch_assoc($result)) { ?>
                             $url = "services/destination-logic.php?dest_id=" . $row['destination_id'] . "&state=delete";
                         }
                         ?>
-                    <button type='button' class='btn btn-outline-secondary btn-sm delete-btn' id="dest-delete-btn"
+                    <button type='button' class='btn btn-danger btn-sm delete-btn' id="dest-delete-btn"
                         data-toggle="modal" data-target="#exampleModal" data-dest_name="<?php echo $row['name'] ?>"
                         data-url="<?php echo $url ?>">Delete</button>
                 </div>

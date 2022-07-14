@@ -73,7 +73,7 @@ include "services/getUsers-serivce.php";
             include 'services/showDestinationsList-service.php';
             ?>
             <div class="add-destination-btn">
-                <a href="add-destination.php"><button type="button" class="btn btn-primary">Add
+                <a href="add-destination.php"><button type="button" class="btn btn-primary" id="addDestBtn">Add
                         destination</button></a>
             </div>
         </section>
