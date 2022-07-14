@@ -16,7 +16,7 @@ while ($row = mysqli_fetch_assoc($result)) { ?>
         </div>
         <div class='col-6 destination-details'>
             <div class='row justify-content-center'>
-                <a href="linesPage.php">
+                <a href="linesPage.php?destname=<?php echo $row['name'] ?>">
                     <button type='button' class='btn btn-info btn-sm col-6'>Choose line</button>
                 </a>
             </div>
