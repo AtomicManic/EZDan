@@ -5,8 +5,8 @@
 
 <h3>My Destinations</h3>
 <div>
-    <h6 class="form-contro-header">Search your destinations:</h6>
-    <input class="form-control" id="myInput" type="text" placeholder="My destination">
+    <h6 class="search-form-header">Search your destinations:</h6>
+    <input class="form-control search-form" id="myInput" type="text" placeholder="My destination">
 </div>
 
 <script>
