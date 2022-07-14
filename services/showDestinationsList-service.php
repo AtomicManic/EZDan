@@ -1,7 +1,9 @@
+
+
+
 <?php
-
+echo"<h3>My Destinations</h3>";
 while ($row = mysqli_fetch_assoc($result)) { ?>
-
 <section class='destinations containet-fluid'>
     <div class='destination row'>
         <div class='col-3 destination-details destination-name'>

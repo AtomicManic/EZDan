@@ -67,7 +67,7 @@ include "services/getUsers-serivce.php";
             <a type="submit" href="userForm.php?button=create" id="addUserBtn" class="btn btn-primary">+ Add
                 user</a>
         </div>
-        <h3 class="row">My Destinations</h3>
+        <!-- <h3 class="row">My Destinations</h3> -->
         <section class="row destinationsList">
             <?php
             include 'services/showDestinationsList-service.php';
